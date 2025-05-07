@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      .card:hover .card-image {
+        transform: translateY(-48px);
+      }
+
+      .card:hover .card-title {
+        transform: translateY(-60px);
+      }
+
+      .card:hover .card-image img {
+        transform: translate(-16px, -42px) rotate(-16deg) scale(1.4);
+      }
+
+      .card:hover .card-content {
+        opacity: 1;
+      }
+
+      .card-image,
+      .card-title,
+      .card-image img,
+      .card-content {
+        transition: all 0.4s ease;
+      }
+    </style>
+  </head>
+
+  <body class="flex justify-center items-center min-h-screen bg-gradient-to-br from-[#1f0036] to-[#0ef6e4]">
+    <div
+      class="card relative max-w-[300px] h-[400px] flex flex-col items-center justify-center bg-white/10 backdrop-blur-md p-4 border border-cyan-300/20 border-b-cyan-200/10 border-r-cyan-200/10 shadow-[0_25px_40px_rgba(0,255,255,0.3)] rounded-xl group transition duration-300"
+    >
+      <div class="card-image w-full flex flex-col items-center">
+        <img
+          src="/assets/shoes.png"
+          alt="green sport shoes"
+          class="w-full h-auto drop-shadow-[0_4px_12px_rgba(0,255,255,0.3)]"
+        />
+        <h3 class="card-title text-cyan-100 font-semibold text-xl mt-2 text-center drop-shadow">Running Shoes</h3>
+      </div>
+
+      <div class="card-content absolute left-8 right-8 bottom-12 text-cyan-100 text-center text-sm opacity-0 leading-relaxed">
+        Lightweight and responsive — perfect for your next sprint or daily run. Style meets performance.
+      </div>
+    </div>
+  </body>
+</html>
